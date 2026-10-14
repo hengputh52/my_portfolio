@@ -4,6 +4,7 @@ import { useRef } from "react";
 import SplitText from "@/components/SplitText";
 import CircularText from "@/components/CircularText";
 import { VuMeter } from "@/components/deck/VuMeter";
+import { MusicToggle } from "@/components/deck/MusicToggle";
 import { artist, km } from "@/lib/data";
 import { gsap, onVelocity, scrollToId, useGSAP } from "@/lib/motion";
 
@@ -170,9 +171,12 @@ export function Hero() {
     <section ref={root} className="relative overflow-hidden pt-8 sm:pt-12 pb-24" aria-label="Side A">
       <div className="page flex items-center justify-between font-mono text-[10px] sm:text-[11px] tracking-[0.22em] text-tobacco mb-10 sm:mb-14">
         <span>MENG HENG RECORDS</span>
-        <span>
-          {artist.location.toUpperCase()} · <span lang="km" className="font-khmer tracking-normal">{km.city}</span>
-        </span>
+        <div className="flex items-center gap-4 sm:gap-6">
+          <span className="hidden sm:inline">
+            {artist.location.toUpperCase()} · <span lang="km" className="font-khmer tracking-normal">{km.city}</span>
+          </span>
+          <MusicToggle />
+        </div>
       </div>
 
       <div className="page grid lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] gap-14 lg:gap-12 items-center">

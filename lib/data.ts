@@ -144,6 +144,13 @@ export const sessions = [
   { id: "s4", date: "Jan–Mar 2025", where: "Dream Girl Contest",       what: "Media team: shooting, editing, cameras", imageSrc: "/img/dgf_gor.jpg" },
 ];
 
+// Background music for the header's MUSIC button.
+// Drop audio files (mp3, m4a, ogg, wav) into /public/music and list them here.
+// They play in order, then loop back to the first one.
+export const music: { title: string; src: string }[] = [
+  { title: "Side A Theme", src: "/music/love_me.mp3" },
+];
+
 // Khmer section labels (km)
 export const km = {
   sideA:    "ចំហៀង ក",
