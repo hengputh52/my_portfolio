@@ -36,12 +36,12 @@ function Sleeve() {
           "repeating-conic-gradient(from 0deg at 72% 78%, rgba(255,240,200,0.2) 0deg 5deg, transparent 5deg 10deg), var(--color-mustard)",
       }}
     >
-      {/* artist photo */}
+      {/* artist photo: sits in front of everything else on the cover */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/img/portrait.png"
         alt={`${artist.name}, cover photo`}
-        className="absolute bottom-0 right-[-6%] h-[74%] w-auto mix-blend-multiply faded"
+        className="absolute z-20 bottom-0 right-[-6%] h-[70%] w-auto faded drop-shadow-[0_8px_18px_rgba(47,31,19,0.35)]"
       />
 
       <div className="absolute inset-0 p-[5%] flex flex-col">
@@ -79,17 +79,17 @@ function Sleeve() {
         </div>
       </div>
 
-      {/* hi-fi sticker */}
-      <div className="absolute top-[20%] right-[5%] w-[23%] aspect-square">
+      {/* hi-fi sticker, in the gap above the photo's head */}
+      <div className="absolute top-[11.5%] right-[8%] w-[17%] aspect-square">
         <div className="absolute inset-0 rounded-full bg-needle shadow-md" />
         <CircularText
           text="★ HI-FI ★ BACKEND SESSIONS "
           spinDuration={24}
           onHover="speedUp"
           className="absolute! inset-[6%] w-auto! h-auto! text-ivory! font-mono! font-bold!"
-          letterClassName="text-[clamp(6px,0.9vw,10px)]"
+          letterClassName="text-[clamp(5px,0.65vw,7.5px)]"
         />
-        <span className="absolute inset-0 flex items-center justify-center font-display text-ivory text-[clamp(0.9rem,2vw,1.5rem)] pointer-events-none">
+        <span className="absolute inset-0 flex items-center justify-center font-display text-ivory text-[clamp(0.7rem,1.5vw,1.1rem)] pointer-events-none">
           33⅓
         </span>
       </div>
