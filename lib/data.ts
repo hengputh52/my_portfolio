@@ -110,7 +110,8 @@ export const tracks: Track[] = [
 
 // ============================================================
 // STUDIO GEAR — each tool is a piece of equipment.
-// "art" picks the illustration in components/gear/GearArt.tsx.
+// "logos" are file names in /public/logos (official marks from Devicon, MIT).
+// To add one: drop name.svg into /public/logos and list "name" here.
 // ============================================================
 export type GearArt =
   | "reel" | "amp" | "console" | "mic" | "case" | "cassette" | "radio" | "guitar" | "crate";
@@ -119,19 +120,19 @@ export interface Gear {
   tool:    string;
   model:   string;
   caption: string;
-  art:     GearArt;
+  logos:   string[];
 }
 
 export const gear: Gear[] = [
-  { tool: "PostgreSQL",         model: "Master tape deck",  caption: "Where every take is kept for good. My first choice for data.", art: "reel" },
-  { tool: "Node.js",            model: "Tube amplifier",    caption: "Warm, always on, and it drives everything downstream.",         art: "amp" },
-  { tool: "NestJS",             model: "Mixing console",    caption: "Every channel in its place: modules, routes, guards.",         art: "console" },
-  { tool: "TypeScript",         model: "Ribbon microphone", caption: "Picks up mistakes before they reach the tape.",                art: "mic" },
-  { tool: "Docker",             model: "Road case",         caption: "Packs the whole rig so it plays the same in every room.",      art: "case" },
-  { tool: "Git & GitHub",       model: "Cassette dubs",     caption: "Every take saved, and nothing lost to a bad edit.",            art: "cassette" },
-  { tool: "Flutter",            model: "Transistor radio",  caption: "Takes the signal out of the studio and into people's hands.",  art: "radio" },
-  { tool: "React & Next.js",    model: "Electric guitar",   caption: "The front of the stage, the part the audience sees.",          art: "guitar" },
-  { tool: "MySQL & MongoDB",    model: "Record crate",      caption: "More places to keep the catalogue, for the right job.",        art: "crate" },
+  { tool: "PostgreSQL",         model: "Master tape deck",  caption: "Where every take is kept for good. My first choice for data.", logos: ["postgresql"] },
+  { tool: "Node.js",            model: "Tube amplifier",    caption: "Warm, always on, and it drives everything downstream.",         logos: ["nodejs"] },
+  { tool: "NestJS",             model: "Mixing console",    caption: "Every channel in its place: modules, routes, guards.",         logos: ["nestjs"] },
+  { tool: "TypeScript",         model: "Ribbon microphone", caption: "Picks up mistakes before they reach the tape.",                logos: ["typescript"] },
+  { tool: "Docker",             model: "Road case",         caption: "Packs the whole rig so it plays the same in every room.",      logos: ["docker"] },
+  { tool: "Git & GitHub",       model: "Cassette dubs",     caption: "Every take saved, and nothing lost to a bad edit.",            logos: ["git", "github"] },
+  { tool: "Flutter",            model: "Transistor radio",  caption: "Takes the signal out of the studio and into people's hands.",  logos: ["flutter"] },
+  { tool: "React & Next.js",    model: "Electric guitar",   caption: "The front of the stage, the part the audience sees.",          logos: ["react", "nextjs"] },
+  { tool: "MySQL & MongoDB",    model: "Record crate",      caption: "More places to keep the catalogue, for the right job.",        logos: ["mysql", "mongodb"] },
 ];
 
 // ============================================================
